@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/panels/master.jsp">
+		<put-attribute name="title" value="My Spring Project" />
+		<put-attribute name="header" value="/WEB-INF/views/panels/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/panels/menu.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/panels/footer.jsp" />
+	</definition>
+	
+	
+	<definition name="home" extends="base.definition">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/WEB-INF/views/common/home.jsp" />
+	</definition>
+	
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body" value="/WEB-INF/views/common/login.jsp" />
+	</definition>
+	
+	<definition name="user" extends="base.definition">
+		<put-attribute name="title" value="User Page" />
+		<put-attribute name="body" value="/WEB-INF/views/common/user.jsp" />
+	</definition>
+	
+	<definition name="customer/list" extends="base.definition">
+		<put-attribute name="title" value="Customer List Page" />
+		<put-attribute name="body" value="/WEB-INF/views/customer/list.jsp" />
+	</definition>
+		
+</tiles-definitions>
