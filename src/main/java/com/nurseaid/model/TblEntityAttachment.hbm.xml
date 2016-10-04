@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 12:31:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.nurseaid.model.TblEntityAttachment" table="tbl_entity_attachment" catalog="allitems_nurseaid_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblAttachment" class="com.nurseaid.model.TblAttachment" fetch="select">
+            <column name="tbl_attachment_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblEntityAbstract" class="com.nurseaid.model.TblEntityAbstract" fetch="select">
+            <column name="tbl_entity_abstract_id" not-null="true" />
+        </many-to-one>
+        <property name="expiryDate" type="date">
+            <column name="expiry_date" length="10" not-null="true" />
+        </property>
+        <property name="references" type="string">
+            <column name="references" length="65535" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" not-null="true" />
+        </property>
+        <property name="lastModifiedDate" type="timestamp">
+            <column name="last_modified_date" length="19" not-null="true" />
+        </property>
+        <property name="lastModifiedBy" type="int">
+            <column name="last_modified_by" not-null="true" />
+        </property>
+        <property name="attachmentFile" type="string">
+            <column name="attachment_file" length="45" />
+        </property>
+        <property name="entityType" type="byte">
+            <column name="entity_type" not-null="true">
+                <comment>1=Employee, 2=Employer</comment>
+            </column>
+        </property>
+        <property name="emailStatus" type="java.lang.Byte">
+            <column name="email_status">
+                <comment>1=Sent</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

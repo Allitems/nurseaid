@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 12:31:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.nurseaid.model.TblAdmin" table="tbl_admin" catalog="allitems_nurseaid_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="fullName" type="string">
+            <column name="full_name" length="20" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="40" not-null="true" />
+        </property>
+        <property name="lastLoginTimestamp" type="timestamp">
+            <column name="last_login_timestamp" length="19" />
+        </property>
+        <set name="tblCmses" table="tbl_cms" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="created_by" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblCms" />
+        </set>
+        <set name="tblJobPositions" table="tbl_job_position" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="created_by" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblJobPosition" />
+        </set>
+    </class>
+</hibernate-mapping>

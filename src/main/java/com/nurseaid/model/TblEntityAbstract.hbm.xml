@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 12:31:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.nurseaid.model.TblEntityAbstract" table="tbl_entity_abstract" catalog="allitems_nurseaid_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblCountry" class="com.nurseaid.model.TblCountry" fetch="select">
+            <column name="tbl_country_id" />
+        </many-to-one>
+        <property name="address1" type="string">
+            <column name="address_1" length="45" />
+        </property>
+        <property name="address2" type="string">
+            <column name="address_2" length="45" />
+        </property>
+        <property name="suburb" type="string">
+            <column name="suburb" length="45" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="45" />
+        </property>
+        <property name="postcode" type="string">
+            <column name="postcode" length="45" />
+        </property>
+        <property name="status" type="java.lang.Byte">
+            <column name="status">
+                <comment>0=inactive, 1=active</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" />
+        </property>
+        <property name="entityCode" type="string">
+            <column name="entity_code" length="15" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" />
+        </property>
+        <set name="tblEntityAttachments" table="tbl_entity_attachment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tbl_entity_abstract_id" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblEntityAttachment" />
+        </set>
+        <set name="tblEmployees" table="tbl_employee" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tbl_entity_abstract_id" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblEmployee" />
+        </set>
+        <set name="tblEmployers" table="tbl_employer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tbl_entity_abstract_id" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblEmployer" />
+        </set>
+    </class>
+</hibernate-mapping>

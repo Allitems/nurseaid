@@ -1,0 +1,23 @@
+Subash we never implemented the real application to printer communication but relied on the print function of the browser.
+
+so these are the steps
+a) Customer places an Order
+b) A background running ajax system which constantly polled the system for any new order finds out that a new order has been placed and pops up a message in restaurants dashboard.
+c) restaurant personnel clicks the popup message and order detail page is opened then he clicks browser's print function to redirect the orders to the shared printer.
+
+there is no push function from the server.its the pull type polling the determines of an order has been placed.
+
+
+and for JNI
+
+there was a hardware which was provided with a DLL file containing all the function calls to read data from the chip. we read the PDF. and developed a C program that called the DLL's function. this C program was written in MFC and visual studio and not turbo c compiler.
+
+then we arote a java code that interfaced this C program from JNI interface.
+
+the DLL was also written in c but i was having difficulty to directly call DLL's function from java code. so an intermediate C program was written to interface device's dll(which came in CD with device) which in turn exchanged data between device and Java program.
+
+
+And if I send you a scanned copy of pragtek's letterpad, will you be able to write the text and send it back to me? i will sign and then return it back to you. And I am ok if you include ptek references in your resume.
+
+
+and regarding that student, i have his FB link and i can send him a message. but it will be more effective if i communicate to him through the Principle. i can contact  him if the principle can acknowledge that i am contacting through him. ani i can see from his FB page that he is from class of 2014. may be he is still in 1st/2nd year. or i am not sure.

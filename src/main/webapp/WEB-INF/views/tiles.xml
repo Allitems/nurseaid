@@ -1,32 +1,281 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-	<definition name="base.definition" template="/WEB-INF/views/panels/master.jsp">
-		<put-attribute name="title" value="My Spring Project" />
+	<definition name="base.definition" template="/WEB-INF/views/panels/master_all.jsp">
+		<put-attribute name="title" value="NurseAid Web Portal" />
+		<put-attribute name="header" value="/WEB-INF/views/panels/header.jsp" />
+		<put-attribute name="breadcrumb" value="/WEB-INF/views/panels/breadcrumb.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/panels/footer.jsp" />
+	</definition>
+	
+	
+	<definition name="base.home" template="/WEB-INF/views/panels/master.jsp">
+		<put-attribute name="title" value="NurseAid Web Portal" />
 		<put-attribute name="header" value="/WEB-INF/views/panels/header.jsp" />
 		<put-attribute name="menu" value="/WEB-INF/views/panels/menu.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/views/panels/footer.jsp" />
 	</definition>
 	
 	
-	<definition name="home" extends="base.definition">
+	<definition name="home" extends="base.home">
 		<put-attribute name="title" value="Home Page" />
 		<put-attribute name="body" value="/WEB-INF/views/common/home.jsp" />
+	</definition>	
+	
+	<definition name="admin/cms/list" extends="base.definition">
+		<put-attribute name="title" value="Content Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/cms/list.jsp" />
 	</definition>
 	
-	<definition name="login" extends="base.definition">
-		<put-attribute name="title" value="Login Page" />
-		<put-attribute name="body" value="/WEB-INF/views/common/login.jsp" />
+	
+	
+	
+	<definition name="employee/register" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Register as an Employee" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/register.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	<definition name="employee/register/success" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Register as an Employee" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/register_success.jsp" />
+		<put-attribute name="breadcrumb" value="" />
 	</definition>
 	
-	<definition name="user" extends="base.definition">
-		<put-attribute name="title" value="User Page" />
-		<put-attribute name="body" value="/WEB-INF/views/common/user.jsp" />
+	
+	
+	<definition name="content/general" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/content/general.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	<definition name="content/contact" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/content/contact.jsp" />
+		<put-attribute name="breadcrumb" value="" />
 	</definition>
 	
-	<definition name="customer/list" extends="base.definition">
-		<put-attribute name="title" value="Customer List Page" />
-		<put-attribute name="body" value="/WEB-INF/views/customer/list.jsp" />
+	
+	<definition name="employer/register" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Register as an Employer" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/register.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	<definition name="employer/register/success" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Register as an Employer" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/register_success.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	
+	
+	
+	<definition name="auth/login" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Login to NurseAid" />
+		<put-attribute name="body" value="/WEB-INF/views/auth/login.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	
+	<definition name="auth/forgot_password" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Forgot Password" />
+		<put-attribute name="body" value="/WEB-INF/views/auth/forgot_password.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	
+	
+	
+	<definition name="admin/landing" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/landing.jsp" />
+		<put-attribute name="breadcrumb" value="" />
+	</definition>
+	
+	<definition name="admin/employee/dashboard" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee Dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/dashboard.jsp" />
+	</definition>
+	
+	<definition name="admin/employee/alljobs" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee All Jobs" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/alljobs.jsp" />
+	</definition>
+	
+	<definition name="admin/employee/timesheetsummary" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee Timesheet Summary" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/timesheetsummary.jsp" />
+	</definition>
+	
+	<definition name="admin/employee/alert" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee Alerts" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/alert.jsp" />
 	</definition>
 		
+		
+	<definition name="admin/employee/stafftimesheet" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee Timesheet" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/stafftimesheet.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/employee/search" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employee Search Results" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/search_results.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/employee/edit" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Edit Employee" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/form.jsp" />
+	</definition>
+	
+	<definition name="admin/employee/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add Employee" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employee/form.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	<definition name="admin/employer/search" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employer Search Results" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employer/search_results.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/employer/edit" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Edit Employer" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employer/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/employer/dashboard" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Employer Dashboard" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employer/dashboard.jsp" />
+	</definition>
+	
+	<definition name="admin/employer/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add Employeer" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/employer/form.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	<definition name="admin/site" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Site Settings" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/dashboard.jsp" />
+	</definition>
+	
+	<definition name="admin/site/content" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Content Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/content/list.jsp" />
+	</definition>
+	<definition name="admin/site/content/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Content" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/content/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/site/settings" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Site Settings" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/settings/list.jsp" />
+	</definition>
+	<definition name="admin/site/settings/edit" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Edit Settings" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/settings/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/site/user" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Admin User Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/user/list.jsp" />
+	</definition>
+	<definition name="admin/site/user/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Admin User" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/user/form.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="admin/site/doctype" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Document Type Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/doctype/list.jsp" />
+	</definition>
+	<definition name="admin/site/doctype/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Document Type" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/doctype/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/site/job_position" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Job Position Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/job_position/list.jsp" />
+	</definition>
+	<definition name="admin/site/job_position/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Job Position" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/job_position/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/site/message" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Notification Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/message/list.jsp" />
+	</definition>
+	<definition name="admin/site/message/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Notification Message" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/message/form.jsp" />
+	</definition>
+	
+	
+	<definition name="admin/site/country" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Country and Nationality Management" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/country/list.jsp" />
+	</definition>
+	<definition name="admin/site/country/add" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Add/Edit Country and Nationality" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/site/country/form.jsp" />
+	</definition>
+	
+	
+	<definition name="employer/general_message" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="System Message" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/general_message.jsp" />
+	</definition>
+	<definition name="employer/landing" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="NurseAid Employer Portal" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/landing.jsp" />
+	</definition>
+	<definition name="employer/all_jobs_timesheets" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="All Jobs / Timesheets" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/all_jobs_timesheets.jsp" />
+	</definition>
+	<definition name="employer/choose_applicants" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Choose Applicants" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/choose_applicants.jsp" />
+	</definition>
+	<definition name="employer/choose_applicants/joblist" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Applied Job List" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/choose_applicants_joblist.jsp" />
+	</definition>
+	<definition name="employer/job_completion_alert" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="Job Completion Alert" />
+		<put-attribute name="body" value="/WEB-INF/views/employer/job_completion_alert.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="employee/landing" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="NurseAid Employee Portal" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/landing.jsp" />
+	</definition>
+	<definition name="employee/job_history" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="All Jobs / Timesheets" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/job_history.jsp" />
+	</definition>
+	<definition name="employee/my_profile" extends="base.definition">
+		<put-attribute name="title" cascade="true" value="My Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/employee/my_profile.jsp" />
+	</definition>
+	
+	
 </tiles-definitions>

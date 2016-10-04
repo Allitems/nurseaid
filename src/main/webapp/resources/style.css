@@ -1,0 +1,574 @@
+body {
+    background-color: #f7f7f7;
+}
+header {
+    padding: 20px 0;
+}
+label {
+    color: #73879c;
+}
+.reg-info-block {
+    border: 1px solid #000;
+}
+span.download-label {
+    display: inline-block;
+    margin: 0 10px 20px 0;
+}
+a.home-icon .fa {
+    font-size: 30px;
+    color: #f00;
+}
+h2.no-mr-h2 {
+    margin-top: 0;
+}
+h2.no-mr-h2 .fa {
+    margin-right: 20px;
+}
+/***********************/
+/*Login page*/
+/**********************/
+
+
+form[role=login] {
+    color: #5d5d5d;
+    margin-bottom: 10px;
+}
+form[role=login] img {
+    display: block;
+    margin: 0 auto;
+}
+form[role=login] input {
+    font-size: 18px;
+    margin: 16px 0;
+}
+form[role=login] label {
+    font-size: 18px;
+    margin: 20px 0;
+}
+form[role=login] button {
+    font-size: 18px;
+    margin: 16px 0;
+    margin-right: 15px;
+}
+.login-fields {
+    background-color: #fff;
+}
+ul.footer-menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 30px;
+}
+ul.footer-menu li a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h1.website-info{
+    border-bottom: 1px solid #000;
+}
+
+.login-form-lock-icon .fa{
+    font-size: 150px;
+    color: #73879c;
+}
+/************************/
+/*Footer*/
+/************************/
+
+footer {
+    margin-top: 60px;
+}
+
+ul.footer-menu:first-child li{
+    padding-left: 0px;
+}
+/***********************/
+
+#datepicker > span:hover {
+    cursor: pointer;
+}
+/************************/
+/***Request Form***/
+/***********************/
+
+.display-message {
+    border: 2px solid #73879c;	float: left;
+    min-height: 30px;	width: 100%;	clear: both;
+    margin-bottom: 20px;    margin-top: 20px;		padding: 5px;
+}
+.job-complete {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ebccd1;
+}
+.job-complete a {
+    color: #f00;
+    display: block;
+}
+.job-complete a:hover {
+    text-decoration: none;
+    color: #a94442;
+}
+.job-complete .fa,
+.report .fa,
+.applicants .fa {
+    font-size: 36px;
+}
+.applicants {
+    padding: 25px 0 10px 0;
+}
+.applicants a {
+    color: #23b725;
+    display: block;
+}
+.applicants a:hover {
+    color: #3c763d;
+    text-decoration: none;
+}
+.report a {
+    display: block;
+}
+.report a:hover {
+    text-decoration: none;
+}
+.notification-number {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 24px;
+    top: 10px;
+}
+/***************************************/
+/***Breadcrumb***/
+/***************************************/
+
+ul.breadcrumb {
+    display: inline-block;
+    margin-top: 0;
+}
+.breadcrumb {
+    padding: 0px;
+    background: #9e9a9a;
+    list-style: none;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.breadcrumb>li+li:before {
+    padding: 0;
+}
+.breadcrumb li {
+    float: left;
+}
+.breadcrumb li.active a {
+    background: brown;
+    /* fallback color */
+
+    background: #ffc107;
+}
+.breadcrumb li.completed a {
+    background: brown;
+    /* fallback color */
+
+    background: hsla(153, 57%, 51%, 1);
+}
+.breadcrumb li.active a:after {
+    border-left: 30px solid #ffc107;
+}
+.breadcrumb li.completed a:after {
+    border-left: 30px solid hsla(153, 57%, 51%, 1);
+}
+.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0 10px 45px;
+    position: relative;
+    display: block;
+    float: left;
+    font-size: 16px;
+}
+.breadcrumb li a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    /* Go big on the size, and let overflow hide */
+
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #9e9a9a;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    left: 100%;
+    z-index: 2;
+}
+.breadcrumb li a:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    /* Go big on the size, and let overflow hide */
+
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid white;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: 1px;
+    left: 100%;
+    z-index: 1;
+}
+.breadcrumb li:first-child a {
+    padding-left: 15px;
+}
+.breadcrumb li a:hover {
+    background: #ffc107;
+}
+.breadcrumb li a:hover:after {
+    border-left-color: #ffc107 !important;
+}
+.breadcrumb .fa {
+    margin-right: 10px;
+}
+/*****************************/
+/****DASHBOARD ****/
+/****************************/
+
+.log-out-button .fa {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+.log-out-button a {
+    font-size: 14px;
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.log-out-button a:hover {
+    text-decoration: none;
+}
+.ae-employee a {
+    color: #f00;
+    display: block;
+}
+.ae-employee .fa,
+.payslips .fa,
+.alerts .fa,
+.timesheet .fa,
+.timesheet-summary .fa,
+.all-jobs .fa, .dashboard .panel-body .fa {
+    font-size: 44px;
+}
+.payslips a {
+    color: #d48e17;
+    display: block;
+}
+.alerts a {
+    color: #49ad4b;
+    display: block;
+}
+.alerts .notification-number {
+    margin-top: -28px;
+}
+.timesheet {
+    border-bottom: 1px solid #84d2f2;
+    margin-bottom: 20px;
+}
+.timesheet a {
+    color: #84d2f2;
+    display: block;
+}
+.timesheet-summary a {
+    color: #508fc5;
+    display: block;
+}
+.timesheet-summary {
+    border-bottom: 1px solid #508fc5;
+    margin-bottom: 20px;
+}
+.all-jobs a {
+    display: block;
+}
+.employee-search {
+    margin-bottom: 40px;
+}
+.option-or {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*******************************/
+/**page 61**/
+/******************************/
+
+.submit-button {
+    margin-top: 25px;
+}
+.welcome {
+    margin-top: 40px;
+}
+.welcome-block .fa {
+    font-size: 200px;
+    margin-bottom: 20px;
+    color: #28a4c9;
+}
+.welcome-block {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+}
+
+/*****************************/
+/*****Page 25*****/
+/****************************/
+h3.ref-number{
+    background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
+    background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #28a4c9;
+    color:#fff;
+    padding:30px;
+    margin-top:0;
+}
+
+td.btn-accept, td.assigned-color, td.declined-color{
+    padding:0 !important; 
+    width: 30%;
+}
+
+.btn-accept a{
+    display: block;
+    color:#fff;
+    padding:10px;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
+    background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #28a4c9;
+    color:#fff;
+}
+
+.btn-accept a:hover{
+    background-image: -webkit-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+    background-image: -o-linear-gradient(top,#f0ad4e 0,#eb9316 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f0ad4e),to(#eb9316));
+    background-image: linear-gradient(to bottom,#f0ad4e 0,#eb9316 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffeb9316', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #e38d13;
+    color:#fff;
+    text-decoration: none;
+}
+
+.btn-accept a:before{
+    xcontent: "Accept";
+}
+
+.btn-accept a:hover:before{
+    xcontent: "Click here to confirm";
+}
+
+/*************************/
+/*page 80*/
+/************************/
+
+td.email-alert{
+    padding:0 !important; 
+}
+
+td.email-alert a{
+    display: block; 
+    color:#fff;
+    background:#a94442;
+    padding:10px;
+}
+
+td.email-alert a:hover{
+    text-decoration: none;
+
+    background-image: -webkit-linear-gradient(top,#f2dede 0,#ebcccc 100%);
+    background-image: -o-linear-gradient(top,#f2dede 0,#ebcccc 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f2dede),to(#ebcccc));
+    background-image: linear-gradient(to bottom,#f2dede 0,#ebcccc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);
+    background-repeat: repeat-x;
+    color:#a94442;
+}
+
+a.send-to-all{
+    display: inline-block; 
+    padding:10px;
+    border-radius: 5px;
+}
+
+/***********************/
+/**page 78*/
+/**********************/
+
+ul.dash-menu li{
+    list-style: none;
+    display: inline-block;
+
+    background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
+    background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #28a4c9;
+    padding:5px;
+    border-radius: 5px;
+}
+
+ul.dash-menu li .fa{
+    margin-right: 5px;
+}
+
+ul.dash-menu li a{
+    color:#fff;
+}
+
+/**************************/
+/**page 78*/
+/**************************/
+
+.timesheet-title-filter{
+    margin-bottom: 20px;
+}
+
+.timesheet-filter{
+    background-color: #eee;
+    padding:5px 0;
+}
+
+.timesheet-filter .fa{
+    font-size: 32px;
+    color:#4aa7b7;
+}
+
+/********************************/
+/**Page 73**/
+/*******************************/
+td.status-text{
+    background-color: #d48e17;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+td.status-text-1{
+    background-color: #23b725;
+    color:#fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/******************************/
+/****Media Query*****/
+/******************************/
+
+@media (max-width: 767px) {
+    .employee-search {
+        margin-top: 25px;
+    }
+
+    .login-form-lock-icon .fa{
+        display: none;
+    }
+
+    form[role="login"] label {
+        margin: 0;
+    }
+
+    ul.dash-menu li{
+        margin-bottom: 5px;
+    }
+
+    .timesheet-filter .fa-refresh{
+        margin-top: 10px;
+    }
+}
+
+/**********************************/
+/***** nimesh start *****/
+/*********************************/
+
+header {
+    background-image: -webkit-linear-gradient(top, #337ab7 0, #2e6da4 100%);
+    background-image: -o-linear-gradient(top, #337ab7 0, #2e6da4 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2e6da4));
+    background-image: linear-gradient(to bottom, #337ab7 0, #2e6da4 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+    background-repeat: repeat-x;
+    color: #fafafa;
+    margin-bottom: 25px;
+}
+header h1.text-center {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    padding-left: 0px;
+}
+footer {
+    margin-top: 0px;
+    xborder-top: 2px solid #337ab7;
+    padding-top: 25px;
+}
+footer p {
+    padding-right: 0px;
+}
+.table-striped th {
+    background-color: #337ab7;
+    color: #fafafa;
+}
+.no_margin {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.no_padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.margin-bottom-25 {
+    margin-bottom: 25px;
+}
+h1 {
+    font-size: 25px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+body {
+    font-family: 'Fira Sans', helvetica;
+}
+span.download-label {
+    width: 130px;
+}
+.w_auto {
+    width: auto;
+}
+.employee-search {
+    margin-bottom: 0px;
+}
+.employee-search-panel {
+    margin-bottom: 30px;
+}#page_title_in_page{	background-color: #900;    position: absolute;    right: 15px;    top: 40px;    padding: 8px 10px;}.welcome a:hover{text-decoration: none; color: #900;}.employee-search .search-panel .btn-default{height: 34px;}.alert{border: 1px dashed;}.control-error{color: red; font-style: italic;}.yes_no{box-shadow: none; width: 30px;}.home-block-intro p{margin: 0px;}.control-error.login{margin-top: -10px; display: block;}.login-links a{float: left; clear: both; width: auto;}.control-label{font-weight: 700;}.btn-accept span{display : none;}.btn-accept{vertical-align: middle; }.assigned-color{background-color: #81e06b; color: white; font-weight: bold; vertical-align: middle !important; text-align: center !important;}.declined-color{background-color: #f95981; color: white;  font-weight: bold; vertical-align: middle !important; text-align: center !important;}.status-code{font-weight: bold; font-size: 1.3em; text-align: center;}.yellow{background-color: #f4e842; color: #242424;}
+/***** nimesh end *****/

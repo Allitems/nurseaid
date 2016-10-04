@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="thread">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://mysql3000.mochahost.com:3306/allitems_nurseaid_db</property>
+        <property name="hibernate.connection.username">allitems_usr45x</property>
+        <property name="hibernate.connection.password">yu78$EER@1kk</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="com/nurseaid/model/TblAdmin.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblCountry.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblEmployee.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblMessage.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblTimesheet.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblCms.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblEntityAttachment.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblAttachment.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblEmployer.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblEntityAbstract.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblJobStatus.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblSettings.hbm.xml" />
+        <mapping resource="com/nurseaid/model/TblJob.hbm.xml" />        
+    </session-factory>
+</hibernate-configuration>

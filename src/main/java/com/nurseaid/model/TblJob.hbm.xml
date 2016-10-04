@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 12:31:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.nurseaid.model.TblJob" table="tbl_job" catalog="allitems_nurseaid_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="tblEmployer" class="com.nurseaid.model.TblEmployer" fetch="select">
+            <column name="tbl_employer_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tblJobPosition" class="com.nurseaid.model.TblJobPosition" fetch="select">
+            <column name="position_id" not-null="true" />
+        </many-to-one>
+        <property name="referenceNumber" type="string">
+            <column name="reference_number" length="10" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+        <property name="shiftFrom" type="string">
+            <column name="shift_from" length="15" not-null="true" />
+        </property>
+        <property name="shiftTo" type="string">
+            <column name="shift_to" length="15" not-null="true" />
+        </property>
+        <property name="jobDate" type="date">
+            <column name="job_date" length="10" not-null="true" />
+        </property>
+        <set name="tblTimesheets" table="tbl_timesheet" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tbl_job_id" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblTimesheet" />
+        </set>
+        <set name="tblJobStatuses" table="tbl_job_status" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tbl_job_id" not-null="true" />
+            </key>
+            <one-to-many class="com.nurseaid.model.TblJobStatus" />
+        </set>
+    </class>
+</hibernate-mapping>

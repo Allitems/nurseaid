@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 26, 2016 12:31:45 PM by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.nurseaid.model.TblTimesheet" table="tbl_timesheet" catalog="allitems_nurseaid_db" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tblJob" class="com.nurseaid.model.TblJob" fetch="select">
+            <column name="tbl_job_id" not-null="true" />
+        </many-to-one>
+        <property name="acceptedDate" type="timestamp">
+            <column name="accepted_date" length="19" />
+        </property>
+        <property name="startTime" type="time">
+            <column name="start_time" length="8" />
+        </property>
+        <property name="endTime" type="time">
+            <column name="end_time" length="8" />
+        </property>
+        <property name="duration" type="java.lang.Float">
+            <column name="duration" precision="12" scale="0" />
+        </property>
+        <property name="break_" type="java.lang.Float">
+            <column name="break" precision="12" scale="0" />
+        </property>
+        <property name="ph150" type="java.lang.Float">
+            <column name="ph_150" precision="12" scale="0" />
+        </property>
+        <property name="ot15" type="java.lang.Float">
+            <column name="ot_1_5" precision="12" scale="0" />
+        </property>
+        <property name="ot2" type="java.lang.Float">
+            <column name="ot_2" precision="12" scale="0" />
+        </property>
+        <property name="c50PerSat" type="java.lang.Float">
+            <column name="c_50_per_sat" precision="12" scale="0" />
+        </property>
+        <property name="c75PerSun" type="java.lang.Float">
+            <column name="c_75_per_sun" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

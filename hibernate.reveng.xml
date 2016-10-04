@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_admin"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_attachment"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_cms"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_country"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_employee"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_employer"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_entity_abstract"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_entity_attachment"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_job"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_job_status"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_message"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_settings"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_timesheet"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_password_reset_request"/>
+  <table-filter match-catalog="allitems_nurseaid_db" match-name="tbl_job_position"/>
+</hibernate-reverse-engineering>
